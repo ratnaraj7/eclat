@@ -1,3 +1,156 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "padding-line-between-statements": [
+      2,
+      {
+        "blankLine": "always",
+        "prev": "directive",
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": "directive",
+        "next": "directive"
+      },
+      {
+        "blankLine": "always",
+        "prev": [
+          "singleline-const",
+          "singleline-let",
+          "singleline-var"
+        ],
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": [
+          "singleline-const",
+          "singleline-let",
+          "singleline-var"
+        ]
+      },
+      {
+        "blankLine": "any",
+        "prev": [
+          "singleline-const",
+          "singleline-let",
+          "singleline-var"
+        ],
+        "next": [
+          "singleline-const",
+          "singleline-let",
+          "singleline-var"
+        ]
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": [
+          "multiline-expression",
+          "multiline-const",
+          "multiline-let",
+          "multiline-var"
+        ]
+      },
+      {
+        "blankLine": "always",
+        "prev": [
+          "multiline-expression",
+          "multiline-const",
+          "multiline-let",
+          "multiline-var"
+        ],
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "expression"
+      },
+      {
+        "blankLine": "always",
+        "prev": "expression",
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": "expression",
+        "next": "expression"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "block-like"
+      },
+      {
+        "blankLine": "always",
+        "prev": "block-like",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      }
+    ],
+    "react/jsx-sort-props": [
+      2,
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "multiline": "last",
+        "ignoreCase": false,
+        "noSortAlphabetically": false,
+        "reservedFirst": true
+      }
+    ],
+    "sort-imports": [
+      2,
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "import/order": [
+      2,
+      {
+        "newlines-between": "always",
+        "warnOnUnassignedImports": true,
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          "sibling",
+          "parent",
+          "index"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@/components/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@/lib/**",
+            "group": "internal"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "internal"
+        ],
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ]
+  }
 }
