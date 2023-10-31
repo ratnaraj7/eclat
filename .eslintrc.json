@@ -1,14 +1,10 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "airbnb",
-    "airbnb-typescript",
-    "prettier"
-  ],
+  "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript", "prettier"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
   "rules": {
+    "react/react-in-jsx-scope": "off",
     "padding-line-between-statements": [
       2,
       {
@@ -23,53 +19,27 @@
       },
       {
         "blankLine": "always",
-        "prev": [
-          "singleline-const",
-          "singleline-let",
-          "singleline-var"
-        ],
+        "prev": ["singleline-const", "singleline-let", "singleline-var"],
         "next": "*"
       },
       {
         "blankLine": "always",
         "prev": "*",
-        "next": [
-          "singleline-const",
-          "singleline-let",
-          "singleline-var"
-        ]
+        "next": ["singleline-const", "singleline-let", "singleline-var"]
       },
       {
         "blankLine": "any",
-        "prev": [
-          "singleline-const",
-          "singleline-let",
-          "singleline-var"
-        ],
-        "next": [
-          "singleline-const",
-          "singleline-let",
-          "singleline-var"
-        ]
+        "prev": ["singleline-const", "singleline-let", "singleline-var"],
+        "next": ["singleline-const", "singleline-let", "singleline-var"]
       },
       {
         "blankLine": "always",
         "prev": "*",
-        "next": [
-          "multiline-expression",
-          "multiline-const",
-          "multiline-let",
-          "multiline-var"
-        ]
+        "next": ["multiline-expression", "multiline-const", "multiline-let", "multiline-var"]
       },
       {
         "blankLine": "always",
-        "prev": [
-          "multiline-expression",
-          "multiline-const",
-          "multiline-let",
-          "multiline-var"
-        ],
+        "prev": ["multiline-expression", "multiline-const", "multiline-let", "multiline-var"],
         "next": "*"
       },
       {
@@ -126,14 +96,7 @@
       {
         "newlines-between": "always",
         "warnOnUnassignedImports": true,
-        "groups": [
-          "external",
-          "builtin",
-          "internal",
-          "sibling",
-          "parent",
-          "index"
-        ],
+        "groups": ["external", "builtin", "internal", "sibling", "parent", "index"],
         "pathGroups": [
           {
             "pattern": "@/components/**",
@@ -144,9 +107,7 @@
             "group": "internal"
           }
         ],
-        "pathGroupsExcludedImportTypes": [
-          "internal"
-        ],
+        "pathGroupsExcludedImportTypes": ["internal"],
         "alphabetize": {
           "order": "asc"
         }
