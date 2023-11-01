@@ -4,6 +4,16 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "@typescript-eslint/consistent-type-imports": [
+      2,
+      {
+        "prefer": "type-imports",
+        "fixStyle": "separate-type-imports",
+        "disallowTypeAnnotations": true
+      }
+    ],
+    "import/consistent-type-specifier-style": [2, "prefer-top-level"],
+    "import/no-duplicates": [2],
     "react/react-in-jsx-scope": "off",
     "padding-line-between-statements": [
       2,
@@ -96,7 +106,7 @@
       {
         "newlines-between": "always",
         "warnOnUnassignedImports": true,
-        "groups": ["external", "builtin", "internal", "sibling", "parent", "index"],
+        "groups": ["external", "builtin", "internal", "type", "sibling", "parent", "index"],
         "pathGroups": [
           {
             "pattern": "@/components/**",
