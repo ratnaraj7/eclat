@@ -4,6 +4,15 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        "js": "ignorePackages",
+        "jsx": "ignorePackages",
+        "mjs": "ignorePackages"
+      }
+    ],
     "@typescript-eslint/consistent-type-imports": [
       2,
       {
