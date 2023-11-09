@@ -4,13 +4,23 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "react/require-default-props": [
+      "error",
+      {
+        "forbidDefaultForRequired": true,
+        "functions": "defaultArguments" //Here
+      }
+    ],
+    "react/jsx-props-no-spreading": [0],
     "import/extensions": [
       "error",
       "always",
       {
-        "js": "ignorePackages",
-        "jsx": "ignorePackages",
-        "mjs": "ignorePackages"
+        "js": "never",
+        "ts": "never",
+        "mjs": "always",
+        "jsx": "never",
+        "tsx": "never"
       }
     ],
     "@typescript-eslint/consistent-type-imports": [
